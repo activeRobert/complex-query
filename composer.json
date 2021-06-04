@@ -1,0 +1,23 @@
+{
+    "name": "activelogiclabs/complex-query",
+    "description": "Create seperation of concern with your SQL logic, especially for complex SQL logic",
+    "authors": [
+        {
+            "name": "ActiveLogic Labs",
+            "email": "info@activelogiclabs.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ActiveLogic\\ComplexQuery\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers":[
+                "ActiveLogic\\ComplexQuery\\ComplexQueryServiceProvider"
+            ]
+        }
+    }
+}

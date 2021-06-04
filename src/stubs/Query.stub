@@ -1,0 +1,21 @@
+//
+// Customize your SQL statement below
+// We encourage the use of formatting on SQL statments for readability
+//
+
+SELECT
+    table.id as tableId,
+    (select count(a_third_table.id) from a_third_table where a_third_table.reference_id = table.id) as total_references
+
+FROM
+    some_table
+
+LEFT JOIN another_table ON another_table.reference_id = some_table.id
+
+WHERE
+    some_table.column > 1
+
+ORDER BY
+    table.created_at DESC
+
+LIMIT 0, 50
